@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">      
+        <title>Minneapolis Snow Emergencies</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-custom rounded">
+        <a class="navbar-brand" href="#">Snow Emergencies</a>
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Factors</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown09">
+                        <a class="dropdown-item" href="{{ url_for('snowfall') }}" >Snowfall</a>
+                        <a class="dropdown-item" href="{{ url_for('days')  }}">Days</a>
+                        <a class="dropdown-item" href="{{ url_for('communities') }}">Communities</a>
+                    </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('emergencies') }}">Emergencies</a>
+            </li>
+          
+          </ul>
+        </div>
+      </nav>
+
+      <main role="main">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+              <h1>Minneapolis Snow Emergencies</h1>
+              <p>We explore factors affecting the number or rate of vehicles being ticketed or towed during snow emergencies.</p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <!-- Example row of columns -->
+          <div class="row">
+            <div class="col-md-4">
+              <h2>Snowfall</h2>
+              <p>Examine snowfall amounts for each snow emergency and the resulting number of ticketed and towed vehicles.</p>
+              <p><a class="btn btn-default" href="{{ url_for('snowfall') }}"  role="button">View details »</a></p>
+            </div>
+            <div class="col-md-4">
+              <h2>Emergency Day</h2>
+              <p>Consider how the snow emergency day affects the rate of ticketing and towing.  Is there a difference between weekdays and weekends?</p>
+              <p><a class="btn btn-default" href="{{ url_for('days') }}" role="button">View details »</a></p>
+           </div>
+            <div class="col-md-4">
+              <h2>Communities</h2>
+              <p>Which Minneapolis communities see higher rates of ticketing and towing?  Do these rates change with snow emergencies?</p>
+              <p><a class="btn btn-default" href="{{ url_for('communities') }}" role="button">View details »</a></p>
+            </div>
+          </div>
+    
+          <div class="row">
+              <div class="col-md-4">
+                <h2>Weather Conditions</h2>
+                <p>Summary information available on the weather conditions leading to the declarations of the different snow emergencies considered here.</p>
+                <p><a class="btn btn-default" href="{{ url_for('emergencies') }}" role="button">View details »</a></p>
+              </div>
+              <div class="col-md-4">
+                <h2>Background</h2>
+                <p>Information from the City of Minneapolis on snow emergencies</p>
+                <p><a class="btn btn-default" href="{{ url_for('background')}}" role="button">View details »</a></p>
+             </div>
+              <div class="col-md-4">
+                <h2>Credits</h2>
+                <p>Attribution for data sources.</p>
+                <p><a class="btn btn-default" href="{{ url_for('credits') }}" role="button">View details »</a></p>
+              </div>
+            </div>
+          <hr>
+    
+          <footer>
+            <p>Attribution:</p>
+            <p>© 2019 Douglas Drake</p>
+          </footer>
+        </div>
+         
+      </main>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- <script src="../static/js/app.js"></script> -->
+  
+
+</body>
+</html>

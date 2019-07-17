@@ -1,0 +1,4 @@
+Area covered	West bounding coordinate	East bounding coordinate	North bounding coordinate	South bounding coordinate
+Minnesota (statewide)	-97.5	-89.00	49.5	43.0
+Twin Cities metropolitan area	-94.01	-92.73	45.42	44.47
+Hennepin County	-93.77	-93.17	45.25	44.78

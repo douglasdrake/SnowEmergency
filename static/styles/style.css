@@ -1,0 +1,48 @@
+/*.table {
+    margin-left: 40px;
+}*/
+
+
+#mainpic {
+    max_width: auto;
+    max_heigth: 300px;
+}
+
+@media (max-width:767px) {
+    #mainpic {
+      float: none;
+      max-width: auto;
+      max-height: 250px;
+      padding: 10px;
+    }
+}
+
+/* styles used in the snowfall map */
+
+#snowfallmap { height: 600px; } 
+#towmap {height: 600px; }
+
+body,
+html {
+  height: 100%;
+}
+
+.legend {
+  line-height: 18px;
+  color: #555;
+}
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+.info {
+  padding: 6px 8px;
+  font: 16px/18px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
